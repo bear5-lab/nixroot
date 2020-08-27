@@ -39,7 +39,7 @@
     arandr smbclient neofetch ffmpeg zstd fd
 
     # ---------- Development ----------
-    git tig cmake gnumake clang clang-tools binutils
+    gitFull tig cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl
   ];
 
