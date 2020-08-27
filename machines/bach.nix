@@ -6,6 +6,8 @@
     ../modules/desktop
   ];
 
+  services.xserver.libinput.naturalScrolling = true;	
+
   # Machine-specific networking configuration.
   networking.hostName = "Bach";
   # Generated via `head -c 8 /etc/machine-id`
