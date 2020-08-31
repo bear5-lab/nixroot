@@ -4,6 +4,7 @@
   imports = [
     ./base
     ../modules/desktop
+    ../dotfiles/home.nix
   ];
 
   services.xserver.libinput.naturalScrolling = true;	
