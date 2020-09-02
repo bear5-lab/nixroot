@@ -9,9 +9,10 @@ with pkgs.lib;
 {
   imports = [ 
     "${home-manager}/nixos"
+    ../options/default.nix
   ];  
   
-  home-manager.users.bear5 = {
+  home-manager.users."${config.settings.username}" = {
     home.packages = with pkgs; [
       alacritty
     ];
