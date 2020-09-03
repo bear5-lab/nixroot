@@ -5,6 +5,7 @@
     ./base
     ../modules/desktop
     ../dotfiles/home.nix
+    ../modules/dev/python.nix
   ];
 
   services.xserver.libinput.naturalScrolling = true;	
