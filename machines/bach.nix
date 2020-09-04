@@ -6,6 +6,7 @@
     ../modules/desktop
     ../dotfiles/home.nix
     ../modules/dev/python.nix
+    ../modules/dev/vim.nix
   ];
 
   services.xserver.libinput.naturalScrolling = true;	
