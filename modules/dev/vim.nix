@@ -11,6 +11,8 @@
      vimrcConfig.customRC = ''
         syntax enable
         set number relativenumber
+        set incsearch
+        set noswapfile
      '';
      }
     )
