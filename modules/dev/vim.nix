@@ -13,6 +13,7 @@
         set number relativenumber
         set incsearch
         set noswapfile
+        set showmatch
         
         set tabstop=2
         set shiftwidth=2
@@ -21,6 +22,8 @@
         autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
         set backspace=2
+        set wildmenu
+        set wildmode=longest:full,full
      '';
      }
     )
