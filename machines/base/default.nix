@@ -40,7 +40,7 @@
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl
+    gcc silver-searcher sbcl nodejs-12_x
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

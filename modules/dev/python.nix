@@ -6,8 +6,10 @@ let
     numpy
     jupyterlab
     matplotlib
+    plotly
+    dash
   ]; 
-  python-with-my-packages = python3.withPackages my-python-packages;
+  python-with-my-packages = python38.withPackages my-python-packages;
 in {
   environment.systemPackages = with pkgs; [
     python-with-my-packages
