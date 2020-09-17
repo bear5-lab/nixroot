@@ -20,7 +20,8 @@
         set softtabstop=2
         set expandtab
         autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-
+        set autoindent
+        
         set backspace=2
         set wildmenu
         set wildmode=longest:full,full
