@@ -6,6 +6,7 @@
 { config, lib, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [(import ../../overlays)];
   # +------------------------------------------------------------+
   # | Boot Settings                                              |
   # +------------------------------------------------------------+
@@ -41,6 +42,7 @@
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl nodejs-12_x
+    hugo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
