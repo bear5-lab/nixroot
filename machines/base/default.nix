@@ -42,7 +42,9 @@
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl nodejs-12_x
-    hugo
+
+    # web development
+    hugo go
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
