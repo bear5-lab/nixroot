@@ -9,6 +9,11 @@
     ../modules/dev/vim.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    jetbrains.pycharm-community
+  ];
+
+
   services.xserver.libinput.naturalScrolling = false;	
 
   # Machine-specific networking configuration.
