@@ -9,7 +9,7 @@
     ../modules/dev/vim.nix
   ];
 
-  services.xserver.libinput.naturalScrolling = true;	
+  services.xserver.libinput.naturalScrolling = false;	
 
   # Machine-specific networking configuration.
   networking.hostName = "Bach";
