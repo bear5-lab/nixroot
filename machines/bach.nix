@@ -3,6 +3,7 @@
 {
   imports = [
     ./base
+    ./base/laptop_addon.nix
     ../modules/desktop
     ../dotfiles/home.nix
     ../modules/dev/python.nix
