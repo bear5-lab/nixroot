@@ -9,6 +9,8 @@ let
     plotly
     dash
     sklearn-deap
+
+    yapf
   ]; 
   python-with-my-packages = python38.withPackages my-python-packages;
 in {
