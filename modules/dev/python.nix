@@ -2,6 +2,7 @@
 with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
+    # data science 
     pandas
     numpy
     jupyterlab
@@ -10,6 +11,10 @@ let
     dash
     sklearn-deap
 
+    # cv
+    opencv4
+
+    # dev
     yapf
   ]; 
   python-with-my-packages = python38.withPackages my-python-packages;
