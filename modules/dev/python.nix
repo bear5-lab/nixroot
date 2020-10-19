@@ -13,6 +13,7 @@ let
 
     # cv
     opencv4
+    imageio
 
     # dev
     yapf
