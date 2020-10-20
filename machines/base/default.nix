@@ -38,7 +38,7 @@
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    feh mplayer
+    feh mplayer scrot
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
