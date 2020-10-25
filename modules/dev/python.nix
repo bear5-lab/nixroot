@@ -10,6 +10,7 @@ let
     plotly
     dash
     sklearn-deap
+    seaborn
 
     # cv
     opencv4
