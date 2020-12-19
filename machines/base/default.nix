@@ -38,7 +38,12 @@
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    feh mplayer scrot
+    
+    # photo, video viewer and editor
+    avidemux feh mplayer 
+
+    # --------- screenshot -------------
+    scrot
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
