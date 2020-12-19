@@ -2,7 +2,7 @@
 
 let home-manager = builtins.fetchGit {
       url= "https://github.com/rycee/home-manager";
-      ref = "release-20.03";
+      ref = "release-20.09";
    };
 in
 with pkgs.lib;
