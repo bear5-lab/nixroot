@@ -9,7 +9,7 @@
      vim_configurable.customize {
      name = "vim";
      vimrcConfig.packages.myPkg = with pkgs.vimPlugins; {
-      start = [ YouCompleteMe auto-pairs];
+      start = [ auto-pairs];
      
      };
      vimrcConfig.customRC = ''
