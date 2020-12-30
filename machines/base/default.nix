@@ -40,7 +40,7 @@
     arandr smbclient neofetch ffmpeg zstd fd
     
     # photo, video viewer and editor
-    avidemux feh mplayer 
+    avidemux feh mplayer vlc
 
     # --------- screenshot -------------
     scrot
