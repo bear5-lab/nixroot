@@ -38,7 +38,8 @@
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    
+    xclip
+
     # photo, video viewer and editor
     avidemux feh mplayer vlc
 
@@ -47,7 +48,7 @@
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl nodejs-12_x
+    gcc silver-searcher sbcl nodejs-12_x bazel
 
     # web development
     hugo go
