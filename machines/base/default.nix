@@ -48,7 +48,7 @@
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl nodejs-12_x bazel
+    gcc silver-searcher sbcl nodejs-12_x bazel jetbrains.clion
 
     # web development
     hugo go
