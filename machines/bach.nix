@@ -8,6 +8,7 @@
     ../dotfiles/home.nix
     ../modules/dev/python.nix
     ../modules/dev/vim.nix
+    ../modules/dev/vscode.nix
   ];
 
   environment.systemPackages = with pkgs; [
