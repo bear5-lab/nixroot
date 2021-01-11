@@ -38,7 +38,7 @@
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    xclip
+    xclip okular
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc
