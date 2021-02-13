@@ -9,7 +9,7 @@
      vim_configurable.customize {
      name = "vim";
      vimrcConfig.packages.myPkg = with pkgs.vimPlugins; {
-      start = [ auto-pairs];
+      start = [ auto-pairs fzf-vim];
      
      };
      vimrcConfig.customRC = ''

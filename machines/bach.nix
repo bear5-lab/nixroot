@@ -9,6 +9,7 @@
     ../modules/dev/python.nix
     ../modules/dev/vim.nix
     ../modules/dev/vscode.nix
+    ./base/alias.nix
   ];
 
   environment.systemPackages = with pkgs; [

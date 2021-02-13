@@ -33,12 +33,12 @@
 
   # Basic softwares that should definitely exist.
   environment.systemPackages = with pkgs; [
-    wget vim google-chrome meld
+    wget google-chrome meld
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    xclip okular
+    xclip okular fzf
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc
