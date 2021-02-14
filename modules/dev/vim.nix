@@ -29,6 +29,9 @@
         set backspace=2
         set wildmenu
         set wildmode=longest:full,full
+
+
+        :map <C-S-n> :Files<CR>
      '';
      }
     )
