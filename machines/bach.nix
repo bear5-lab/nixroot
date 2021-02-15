@@ -19,6 +19,7 @@
 
 
   services.xserver.libinput.naturalScrolling = false;	
+  services.xserver.libinput.leftHanded = true;
 
   # Machine-specific networking configuration.
   networking.hostName = "Bach";

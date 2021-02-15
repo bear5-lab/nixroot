@@ -7,6 +7,11 @@
 
 {
   nixpkgs.overlays = [(import ../../overlays)];
+
+  imports = [
+    ./inputrc.nix
+  ];
+
   # +------------------------------------------------------------+
   # | Boot Settings                                              |
   # +------------------------------------------------------------+
@@ -38,7 +43,7 @@
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
-    xclip okular fzf
+    xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc
@@ -120,10 +125,5 @@
   # +------------------------------------------------------------+
   # | System files                                               |
   # +------------------------------------------------------------+
-
- # environment.etc = {
- #   "bashrc.local".source = ../../data/bashrc.local;
- #   "inputrc".source = ../../data/inputrc;
- # };
 
 }
