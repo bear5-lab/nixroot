@@ -17,7 +17,6 @@
     jetbrains.pycharm-community
   ];
 
-
   services.xserver.libinput.naturalScrolling = false;	
   services.xserver.libinput.leftHanded = true;
 
