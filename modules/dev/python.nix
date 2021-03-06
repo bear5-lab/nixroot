@@ -2,6 +2,9 @@
 with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
+    # utils
+    tqdm
+
     # data science 
     pandas
     numpy
