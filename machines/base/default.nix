@@ -59,6 +59,8 @@
 
     # web development
     hugo go
+
+    ros2nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

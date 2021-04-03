@@ -16,4 +16,6 @@ in {
   hugo = unstable-pkgs.hugo;
 
   ethminer = pkgs_210226.ethminer;
+
+  ros2nix = self.callPackage ../pkgs/ros/ros2nix {};
 }
