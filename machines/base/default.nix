@@ -6,7 +6,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  nixpkgs.overlays = [(import ../../overlays)];
+  nixpkgs.overlays = [
+    (import ../../overlays)
+    (import ../../overlays/nix-ros-overlay/overlay.nix)
+  ];
 
   imports = [
     ./inputrc.nix
