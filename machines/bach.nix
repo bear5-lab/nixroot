@@ -17,6 +17,8 @@
     jetbrains.pycharm-community
   ];
 
+  users.users."${config.settings.username}".extraGroups = ["docker"];
+
   services.xserver.libinput.naturalScrolling = false;	
   services.xserver.libinput.leftHanded = true;
 

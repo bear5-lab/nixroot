@@ -13,6 +13,7 @@
 
   imports = [
     ./inputrc.nix
+    ../../modules/dev/docker.nix
   ];
 
   # +------------------------------------------------------------+
@@ -58,7 +59,7 @@
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl nodejs-12_x bazel jetbrains.clion
-    texlive.combined.scheme-full docker
+    texlive.combined.scheme-full 
 
     # web development
     hugo go
