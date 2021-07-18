@@ -48,7 +48,7 @@
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr smbclient neofetch ffmpeg zstd fd
     xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
-    pciutils 
+    pciutils openconnect
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc
