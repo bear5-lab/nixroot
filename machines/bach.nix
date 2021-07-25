@@ -19,8 +19,8 @@
 
   users.users."${config.settings.username}".extraGroups = ["docker"];
 
-  services.xserver.libinput.naturalScrolling = false;	
-  services.xserver.libinput.leftHanded = true;
+  services.xserver.libinput.touchpad.naturalScrolling = false;	
+  services.xserver.libinput.mouse.leftHanded = true;
 
   # Machine-specific networking configuration.
   networking.hostName = "Bach";

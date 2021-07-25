@@ -12,9 +12,9 @@ let
     matplotlib
     plotly
     dash
-    sklearn-deap
+    #sklearn-deap
     seaborn
-
+    
     # cv
     opencv4
     imageio
@@ -22,7 +22,7 @@ let
     # dev
     yapf
   ]; 
-  python-with-my-packages = python38.withPackages my-python-packages;
+  python-with-my-packages = python39.withPackages my-python-packages;
 in {
   environment.systemPackages = with pkgs; [
     python-with-my-packages
