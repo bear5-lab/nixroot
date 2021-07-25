@@ -19,8 +19,8 @@ environment.etc."i3/statusbar.toml" = {
     [[block]]
     block = "memory"
     display_type = "memory"
-    format_mem = "{Mup}%"
-    format_swap = "{SUp}%"
+    format_mem = "{mem_used}%"
+    format_swap = "{swap_used}%"
       
     [[block]]
     block = "cpu"
