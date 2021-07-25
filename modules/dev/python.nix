@@ -15,6 +15,9 @@ let
     #sklearn-deap
     seaborn
     
+    # optimization
+    cvxpy
+
     # cv
     opencv4
     imageio
