@@ -13,4 +13,6 @@ let
 
 in {
   ros2nix = self.callPackage ../pkgs/ros/ros2nix {};
+
+  tools-scripts = self.callPackage ../tools {};
 }
