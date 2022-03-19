@@ -49,6 +49,7 @@
     arandr smbclient neofetch ffmpeg zstd fd
     xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils openconnect openvpn simplescreenrecorder
+    ncdu
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc
