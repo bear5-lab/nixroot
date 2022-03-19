@@ -15,6 +15,16 @@ in {
       autoStart = false;
       updateResolvConf = true;
     };
-    
+ 
+    tokyo = {
+      config = "config /home/bear5/.config/nixos/tokyo.ovpn";
+      authUserPass = {
+      username = name;
+      password = pswd;      
+      };
+      autoStart = false;
+      updateResolvConf = true;      
+    };
+
   };
 }
