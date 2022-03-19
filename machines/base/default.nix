@@ -70,6 +70,10 @@
 
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-9.4.4"
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.bash.enableCompletion = true;
