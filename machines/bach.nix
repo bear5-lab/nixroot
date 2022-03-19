@@ -14,7 +14,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    typora
     jetbrains.pycharm-community
   ];
 
