@@ -8,7 +8,6 @@
 {
   nixpkgs.overlays = [
     (import ../../overlays)
-    (import ../../overlays/nix-ros-overlay/overlay.nix)
   ];
 
   imports = [
@@ -66,7 +65,6 @@
     hugo go
 
     # customized
-    ros2nix
     tools-scripts
 
   ];
