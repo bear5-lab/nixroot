@@ -5,6 +5,7 @@
   environment.shellAliases = {
     g = "cd ~/projects";
     root = "cd ~/projects/nixroot";
+    robo = "cd ~/projects/robotics";
     cdd = "cd $(fd --type directory . $HOME | fzf -e)";
   };
 
