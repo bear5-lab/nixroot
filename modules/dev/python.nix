@@ -14,6 +14,10 @@ let
     dash
     #sklearn-deap
     seaborn
+
+    # ml
+    pytorch
+    torchvision
     
     # optimization
     cvxpy
