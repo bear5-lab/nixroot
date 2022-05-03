@@ -51,7 +51,7 @@
     ncdu
 
     # photo, video viewer and editor
-    avidemux feh mplayer vlc
+    avidemux feh mplayer vlc libreoffice
 
     # --------- screenshot -------------
     scrot
