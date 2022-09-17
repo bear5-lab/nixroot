@@ -21,9 +21,6 @@
     alias vpn_start='sudo systemctl start openvpn-la.service'
     alias vpn_status='sudo systemctl status openvpn-la.service'
     alias vpn_stop='sudo systemctl stop openvpn-la.service'
-    alias vpn_tk_start='sudo systemctl start openvpn-tokyo.service'
-    alias vpn_tk_status='sudo systemctl status openvpn-tokyo.service'
-    alias vpn_tk_stop='sudo systemctl stop openvpn-tokyo.service'
   '';
 
   users.users."${config.settings.username}".extraGroups = ["docker"];
