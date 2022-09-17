@@ -45,7 +45,7 @@
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
-    arandr smbclient neofetch ffmpeg zstd fd
+    arandr samba neofetch ffmpeg zstd fd
     xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils openconnect openvpn simplescreenrecorder
     ncdu flameshot tree
@@ -71,6 +71,8 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-9.4.4"
+    "python2.7-pyjwt-1.7.1"
+    "nodejs-12.22.12"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

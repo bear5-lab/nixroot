@@ -13,10 +13,6 @@
     ./base/vpn.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    jetbrains.pycharm-community
-  ];
-
   environment.interactiveShellInit = ''
     alias vpn_start='sudo systemctl start openvpn-la.service'
     alias vpn_status='sudo systemctl status openvpn-la.service'
