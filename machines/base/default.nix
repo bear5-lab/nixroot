@@ -51,7 +51,7 @@
     ncdu flameshot tree
 
     # photo, video viewer and editor
-    avidemux feh mplayer vlc libreoffice
+    avidemux feh mplayer vlc libreoffice you-get
 
     # --------- screenshot -------------
     scrot

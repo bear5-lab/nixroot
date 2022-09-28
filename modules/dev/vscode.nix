@@ -9,6 +9,7 @@ let
     redhat.vscode-yaml
     ms-python.python
     vscodevim.vim
+    ms-vscode-remote.remote-ssh
   ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name="gitlens";
@@ -16,12 +17,6 @@ let
       version = "11.1.3";
       sha256= "1x9bkf9mb56l84n36g3jmp3hyfbyi8vkm2d4wbabavgq6gg618l6";
     }
-    {
-      name="remote-ssh";
-      publisher = "ms-vscode-remote";
-      version = "0.66.0";
-      sha256 = "04jgn88b1j10qas4n6icg1zfvqqbxxmnjpvvkxdjgp845530k708";
-   }
   ]; 
 
   vscode-with-extensions = pkgs.vscode-with-extensions.override {
