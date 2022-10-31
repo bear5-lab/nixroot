@@ -7,6 +7,7 @@ let
 
     # data science 
     pandas
+    openpyxl
     numpy
     jupyterlab
     matplotlib

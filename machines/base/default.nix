@@ -31,7 +31,7 @@
   # +------------------------------------------------------------+
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Asia/Shanghai";
 
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
@@ -49,6 +49,7 @@
     xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils openconnect openvpn simplescreenrecorder
     ncdu flameshot tree
+    putty 
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
