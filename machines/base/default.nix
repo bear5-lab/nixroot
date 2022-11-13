@@ -49,7 +49,7 @@
     xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils openconnect openvpn simplescreenrecorder
     ncdu flameshot tree
-    putty 
+    termius
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
