@@ -19,6 +19,8 @@
       function format_py(){
           yapf -i --style=google "$@"
       } 
+
+      export PYTHONPATH=$PYTHONPATH:~/projects/mamba
   '';
 
 }
