@@ -59,7 +59,7 @@
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl nodejs-12_x bazel 
+    gcc silver-searcher sbcl bazel 
     texlive.combined.scheme-full jdk bazel-buildtools
 
     # web development
@@ -74,6 +74,7 @@
     "electron-9.4.4"
     "python2.7-pyjwt-1.7.1"
     "nodejs-12.22.12"
+    "python2.7-certifi-2021.10.8"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
