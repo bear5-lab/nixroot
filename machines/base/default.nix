@@ -61,6 +61,7 @@
     gitFull tig cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl bazel 
     texlive.combined.scheme-full jdk bazel-buildtools
+    feishu
 
     # web development
     hugo go
