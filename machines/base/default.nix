@@ -41,7 +41,7 @@
 
   # Basic softwares that should definitely exist.
   environment.systemPackages = with pkgs; [
-    wget google-chrome meld
+    wget meld
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
@@ -51,6 +51,9 @@
     ncdu flameshot tree
     termius
 
+    # --------- Browsers ----------- #
+    google-chrome tor
+
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
 
@@ -59,9 +62,11 @@
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl bazel 
-    texlive.combined.scheme-full jdk bazel-buildtools
-    feishu
+    gcc silver-searcher sbcl bazel jdk bazel-buildtools 
+
+    # ---------- Latex --------------- #
+    texlive.combined.scheme-full pandoc 
+    texstudio
 
     # web development
     hugo go
