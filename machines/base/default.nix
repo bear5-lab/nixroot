@@ -41,14 +41,14 @@
 
   # Basic softwares that should definitely exist.
   environment.systemPackages = with pkgs; [
-    wget meld
+    wget 
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
-    arandr samba neofetch ffmpeg zstd fd
-    xclip okular fzf xorg.xmodmap xorg.xev xorg.xkbcomp
-    pciutils openconnect openvpn simplescreenrecorder
-    ncdu flameshot tree
+    arandr neofetch ffmpeg zstd fd
+    xclip fzf xorg.xmodmap xorg.xev xorg.xkbcomp
+    pciutils openconnect openvpn 
+    ncdu tree
     termius
 
     # --------- Browsers ----------- #
@@ -56,9 +56,10 @@
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
+    okular
 
     # --------- screenshot -------------
-    scrot
+    scrot flameshot simplescreenrecorder
 
     # ---------- Development ----------
     gitFull tig cmake gnumake clang clang-tools binutils
