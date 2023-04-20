@@ -26,6 +26,10 @@
   # Filesystem Support
   boot.supportedFilesystems = [ "zfs" "ntfs" ];
 
+  boot.extraModprobeConfig = ''
+    options snd-intel-dspcfg dsp_driver=1
+    '';
+
   # +------------------------------------------------------------+
   # | Default Settings                                           |
   # +------------------------------------------------------------+
@@ -47,7 +51,7 @@
     rsync usbutils mkpasswd nixops p7zip unzip
     arandr neofetch ffmpeg zstd fd
     xclip fzf xorg.xmodmap xorg.xev xorg.xkbcomp
-    pciutils openconnect openvpn 
+    pciutils 
     ncdu tree
     termius
 
@@ -56,7 +60,7 @@
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
-    okular
+    okular poppler_utils
 
     # --------- screenshot -------------
     scrot flameshot simplescreenrecorder
@@ -74,6 +78,9 @@
 
     # customized
     tools-scripts
+
+    # vpn
+    openconnect openvpn 
 
   ];
 
