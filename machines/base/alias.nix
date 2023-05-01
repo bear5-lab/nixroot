@@ -8,6 +8,7 @@
     robo = "cd ~/projects/robotics";
     cdd = "cd $(fd --type directory . $HOME | fzf -e)";
     gs = "git status";
+    mount_nas = "sudo mount -t nfs 192.168.31.22:/volume1/homes/wuxiong2 /home/bear5/nas";
   };
   
   environment.interactiveShellInit=
