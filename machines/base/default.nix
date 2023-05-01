@@ -100,6 +100,7 @@
     pinentryFlavor = "tty";
   };
 
+  services.nfs.server.enable = true;
   programs.ssh.startAgent = lib.mkDefault false;
 
   # For monitoring and inspecting the system.
