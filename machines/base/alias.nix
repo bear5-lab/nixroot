@@ -21,7 +21,6 @@
           yapf -i --style=google "$@"
       } 
 
-      export PYTHONPATH=$PYTHONPATH:~/projects/mamba
   '';
 
 }

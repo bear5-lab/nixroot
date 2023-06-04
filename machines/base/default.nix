@@ -89,6 +89,8 @@
     "python2.7-pyjwt-1.7.1"
     "nodejs-12.22.12"
     "python2.7-certifi-2021.10.8"
+    "python-2.7.18.6"
+    "openssl-1.1.1u"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

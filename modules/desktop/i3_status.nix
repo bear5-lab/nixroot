@@ -3,9 +3,6 @@
 {
 environment.etc."i3/statusbar.toml" = {
   text = ''
-    theme = "slick"
-    icons = "awesome"
-    
     [[block]]
     block = "disk_space"
     path = "/home"
