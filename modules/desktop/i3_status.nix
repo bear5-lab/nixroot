@@ -3,22 +3,32 @@
 {
 environment.etc."i3/statusbar.toml" = {
   text = ''
+    [theme]
+    theme = "slick"
+    
+    [icons]
+    icons = "awesome6"
+   
     [[block]]
     block = "disk_space"
     path = "/home"
-    alias = "Home"
-    info_type = "available"
-    unit = "GB"
     interval = 20
+    info_type = "available"
+    alert_unit = "GB"
     warning = 20.0
     alert = 10.0
-      
+    format = " $icon $available "
+    format_alt = " $icon $available / $total "
+
     [[block]]
     block = "memory"
-    display_type = "memory"
-    format_mem = "{mem_used}%"
-    format_swap = "{swap_used}%"
-      
+    format = " $icon $mem_used_percents.eng(w:1) "
+    format_alt = " $icon_swap $swap_free.eng(w:3,u:B,p:M)/$swap_total.eng(w:3,u:B,p:M)($swap_used_percents.eng(w:2)) "
+    interval = 30
+    warning_mem = 70
+    critical_mem = 90
+  
+
     [[block]]
     block = "cpu"
     interval = 1
@@ -26,7 +36,7 @@ environment.etc."i3/statusbar.toml" = {
     [[block]]
     block = "battery"
     interval = 10
-    format = "{percentage}% {time}"
+    format = "$icon $percentage"
 
     [[block]]
     block = "sound"
@@ -34,7 +44,7 @@ environment.etc."i3/statusbar.toml" = {
     [[block]]
     block = "time"
     interval = 60
-    format = "%a %d/%m %R"
+    format = "$icon $timestamp.datetime()"
     '';
 };
 }
