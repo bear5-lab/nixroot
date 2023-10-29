@@ -13,6 +13,7 @@
   imports = [
     ./inputrc.nix
     ../../modules/dev/docker.nix
+    ../../modules/fcitx
   ];
 
   # +------------------------------------------------------------+

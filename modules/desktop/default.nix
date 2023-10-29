@@ -65,11 +65,5 @@
       font = "ter-132n";
       keyMap = "us";
     };
-    
-      # Input Method
-    i18n.inputMethod = {
-        enabled = "fcitx5";
-        fcitx5.addons = with pkgs; [fcitx5-chinese-addons];
-    };
   };
 }
