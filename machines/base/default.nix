@@ -26,10 +26,6 @@
   # Filesystem Support
   boot.supportedFilesystems = [ "zfs" "ntfs" ];
 
-  boot.extraModprobeConfig = ''
-    options snd-intel-dspcfg dsp_driver=1
-    '';
-
   # +------------------------------------------------------------+
   # | Default Settings                                           |
   # +------------------------------------------------------------+
@@ -46,6 +42,7 @@
   # Basic softwares that should definitely exist.
   environment.systemPackages = with pkgs; [
     wget 
+    gnome.gnome-control-center
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd nixops p7zip unzip
@@ -54,6 +51,8 @@
     pciutils 
     ncdu tree
     termius
+    dig # from dns to ip address
+    pavucontrol # pulseaudio volume control
 
     # --------- Browsers ----------- #
     google-chrome tor
@@ -116,8 +115,14 @@
   };
 
   # Enable sound
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   # Enable CUPS services
   services.printing.enable = true;
