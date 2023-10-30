@@ -10,14 +10,7 @@
     ../modules/dev/vim.nix
     ../modules/dev/vscode.nix
     ./base/alias.nix
-    ./base/vpn.nix
   ];
-
-  environment.interactiveShellInit = ''
-    alias vpn_start='sudo systemctl start openvpn-la.service'
-    alias vpn_status='sudo systemctl status openvpn-la.service'
-    alias vpn_stop='sudo systemctl stop openvpn-la.service'
-  '';
 
   users.users."${config.settings.username}".extraGroups = ["docker"];
 
