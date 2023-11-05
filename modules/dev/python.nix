@@ -9,7 +9,7 @@ let
     pandas
     openpyxl
     numpy
-    jupyterlab
+    #jupyterlab
     matplotlib
     plotly
     dash
@@ -17,8 +17,8 @@ let
     seaborn
 
     # ml
-    pytorch
-    torchvision
+    #pytorch
+    #torchvision
     
     # optimization
     cvxpy
@@ -30,7 +30,7 @@ let
     # dev
     yapf
   ]; 
-  python-with-my-packages = python310.withPackages my-python-packages;
+  python-with-my-packages = python3Full.withPackages my-python-packages;
 in {
   environment.systemPackages = with pkgs; [
     python-with-my-packages

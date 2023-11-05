@@ -91,6 +91,7 @@
     "python2.7-certifi-2021.10.8"
     "python-2.7.18.6"
     "openssl-1.1.1u"
+    "openssl-1.1.1w"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

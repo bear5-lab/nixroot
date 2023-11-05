@@ -1,16 +1,7 @@
 self: super:
 let 
-  unstable-pkgs = import (builtins.fetchTarball {
-    # 09.16.2020
-    url = https://github.com/NixOS/nixpkgs/tarball/441a7da8080352881bb52f85e910d8855e83fc55; 
-  }) {config.allowUnfree = true;};
-
-  pkgs_210226 = import (builtins.fetchGit {
-    name = "version-210226";
-    url = "https://github.com/NixOS/nixpkgs/"; 
-    rev = "36126fdbfabe7aa34d4f84d1ee9ac06cd371aada";
-  }) {config.allowUnfree = true;};
-
+#  unstable-pkgs = import <nixos-unstable> {config.allowUnfree = true;};
 in {
   tools-scripts = self.callPackage ../tools {};
+ # python310 = unstable-pkgs.python310;
 }
