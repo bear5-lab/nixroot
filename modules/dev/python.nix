@@ -9,7 +9,6 @@ let
     pandas
     openpyxl
     numpy
-    #jupyterlab
     matplotlib
     plotly
     dash
@@ -17,8 +16,8 @@ let
     seaborn
 
     # ml
-    #pytorch
-    #torchvision
+    pytorch
+    torchvision
     
     # optimization
     cvxpy
