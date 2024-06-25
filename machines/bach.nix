@@ -6,8 +6,8 @@
     ./base/laptop_addon.nix
     ../modules/desktop
     ../dotfiles/home.nix
-    ../modules/dev/python.nix
     ../modules/dev/vim.nix
+    ../modules/dev/python.nix
     ../modules/dev/vscode.nix
     ./base/alias.nix
   ];

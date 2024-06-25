@@ -2,7 +2,7 @@
 
 let home-manager = builtins.fetchGit {
       url= "https://github.com/rycee/home-manager";
-      ref = "release-20.09";
+      ref = "release-24.05";
    };
 in
 with pkgs.lib;
@@ -16,7 +16,8 @@ with pkgs.lib;
     home.packages = with pkgs; [
       alacritty
     ];
-  
-    xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yml;
+    home.stateVersion = "24.05";
+
+    xdg.configFile."alacritty/alacritty.toml".source = ./alacritty.toml;
   };
 }

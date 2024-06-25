@@ -1,0 +1,75 @@
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.normal]
+black = "0x000000"
+blue = "0x6272a4"
+cyan = "0x8be9fd"
+green = "0x50fa7b"
+magenta = "0xbd93f9"
+red = "0xff5555"
+white = "0xf8f8f2"
+yellow = "0xf1fa8c"
+
+[colors.primary]
+background = "0x282a36"
+foreground = "0xf8f8f2"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Fira Code"
+style = "Italic"
+
+[font.normal]
+family = "Fira Code"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "full"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 2
+y = 2

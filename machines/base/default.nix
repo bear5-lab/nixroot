@@ -46,7 +46,7 @@
     gnome.gnome-control-center
 
     # ---------- System Utils ----------
-    rsync usbutils mkpasswd nixops p7zip unzip
+    rsync usbutils mkpasswd p7zip unzip
     arandr neofetch ffmpeg zstd fd
     xclip fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils 
@@ -81,6 +81,10 @@
 
     # vpn
     openconnect openvpn 
+    globalprotect-openconnect
+
+    # instant msg
+    feishu 
 
   ];
 
@@ -100,7 +104,7 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "tty";
+    #pinentryPackage = "tty";
   };
 
   services.nfs.server.enable = true;

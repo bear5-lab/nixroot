@@ -7,7 +7,7 @@ let
 
     # data science 
     pandas
-    openpyxl
+    openpyxl # read write excel 
     numpy
     matplotlib
     plotly
@@ -24,12 +24,11 @@ let
 
     # cv
     opencv4
-    imageio
 
     # dev
     yapf
   ]; 
-  python-with-my-packages = python3Full.withPackages my-python-packages;
+  python-with-my-packages = python310.withPackages my-python-packages;
 in {
   environment.systemPackages = with pkgs; [
     python-with-my-packages
