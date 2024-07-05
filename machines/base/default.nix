@@ -119,6 +119,7 @@
     # Enable X11 Fowarding, can be connected with ssh -Y.
     forwardX11 = true;
   };
+  services.mullvad-vpn.enable = true;
 
   # Enable sound
   hardware.pulseaudio.enable = false;
