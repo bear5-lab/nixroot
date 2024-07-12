@@ -85,6 +85,7 @@
 
     # instant msg
     feishu 
+    slack
 
   ];
 
