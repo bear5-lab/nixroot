@@ -14,16 +14,9 @@ let
     dash
     #sklearn-deap
     seaborn
-
-    # ml
-    pytorch
-    torchvision
     
     # optimization
     cvxpy
-
-    # cv
-    opencv4
 
     # dev
     yapf
