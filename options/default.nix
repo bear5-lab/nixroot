@@ -11,6 +11,16 @@ with lib;
     };
   };
 
+  options.bix = {
+    machineType = mkOption {
+      type = types.enum ["workstation" "laptop"];
+      default = "workstation";
+      description = ''
+        Specify the machine type, [workstation, laptop]
+      '';
+    };
+  };
+
   config.users.users."${config.bix.mainUser}" = {
     isNormalUser = true;
     extraGroups = [
@@ -18,5 +28,15 @@ with lib;
       "networkmanager"  # enable change network settings
     ];
   };
+
+  config.services.logind = if (config.bix.machineType == "laptop") then
+  {
+    lidSwitch = "suspend-then-hibernate";
+    lidSwitchDocked = "ignore";
+    lidSwitchExternalPower = "ignore";
+    extraConfig = ''
+      HoldoffTimeoutSec=60;
+    '';
+  } else {};
 
 }	

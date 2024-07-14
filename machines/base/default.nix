@@ -5,16 +5,38 @@
 
 { config, lib, pkgs, ... }:
 
-{
+let 
+  bix = config.bix;
+  home-manager = builtins.fetchGit {
+      url= "https://github.com/rycee/home-manager";
+      ref = "release-24.05";
+  };
+
+in {
   nixpkgs.overlays = [
     (import ../../overlays)
   ];
 
   imports = [
+    "${home-manager}/nixos"
     ./inputrc.nix
+    ./packages.nix
     ../../modules/dev/docker.nix
     ../../modules/fcitx
+    ../../options/default.nix
   ];
+
+  # Home manager
+  home-manager.users."${bix.mainUser}" = {
+    home.stateVersion = "24.05";
+    home.username = "${bix.mainUser}";
+    home.homeDirectory = "/home/${bix.mainUser}";
+
+    imports = [
+      ../../home/git
+      ../../home/alacritty
+    ];
+  };
   
   # +------------------------------------------------------------+
   # | Boot Settings                                              |
@@ -32,55 +54,6 @@
 
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Basic softwares that should definitely exist.
-  environment.systemPackages = with pkgs; [
-    wget 
-    gnome.gnome-control-center
-
-    # ---------- System Utils ----------
-    rsync usbutils mkpasswd p7zip unzip
-    arandr neofetch ffmpeg zstd fd
-    xclip fzf xorg.xmodmap xorg.xev xorg.xkbcomp
-    pciutils 
-    ncdu tree
-    termius
-    dig # from dns to ip address
-    pavucontrol # pulseaudio volume control
-
-    # --------- Browsers ----------- #
-    google-chrome tor
-
-    # photo, video viewer and editor
-    avidemux feh mplayer vlc libreoffice you-get
-    okular poppler_utils
-
-    # --------- screenshot -------------
-    scrot flameshot simplescreenrecorder
-
-    # ---------- Development ----------
-    gitFull tig cmake gnumake clang clang-tools binutils
-    gcc silver-searcher sbcl bazel jdk bazel-buildtools 
-
-    # ---------- Latex --------------- #
-    texlive.combined.scheme-full pandoc 
-    texstudio
-
-    # web development
-    hugo go
-
-    # customized
-    tools-scripts
-
-    # vpn
-    openconnect openvpn 
-    globalprotect-openconnect
-
-    # instant msg
-    feishu 
-    slack
-
-  ];
 
   nixpkgs = {
     config = {
@@ -128,24 +101,7 @@
   # Disable UDisks by default (significantly reduces system closure size)
   services.udisks2.enable = lib.mkDefault false;
 
-  # +------------------------------------------------------------+
-  # | Network Settings                                           |
-  # +------------------------------------------------------------+
-
-  services.avahi = {
-    enable = true;
-
-    # Whether to enable the mDNS NSS (Name Service Switch) plugin.
-    # Enabling this allows applications to resolve names in the
-    # `.local` domain.
-    nssmdns = true;
-
-    # Whether to register mDNS address records for all local IP
-    # addresses.
-    publish.enable = true;
-    publish.addresses = true;
-  };
-
+  # bluetooth
   services.blueman.enable = true;
 
   # +------------------------------------------------------------+
