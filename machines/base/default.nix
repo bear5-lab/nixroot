@@ -15,30 +15,23 @@
     ../../modules/dev/docker.nix
     ../../modules/fcitx
   ];
-
+  
   # +------------------------------------------------------------+
   # | Boot Settings                                              |
   # +------------------------------------------------------------+
-
-  # Boot with UEFI
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Filesystem Support
-  boot.supportedFilesystems = [ "zfs" "ntfs" ];
-
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    supportedFilesystems = ["zfs" "ntfs"];
+  };
   # +------------------------------------------------------------+
   # | Default Settings                                           |
   # +------------------------------------------------------------+
 
-  # Set your time zone.
-  time.timeZone = "Asia/Shanghai";
-
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Enable to use non-free packages such as nvidia drivers
-  nixpkgs.config.allowUnfree = true;
 
   # Basic softwares that should definitely exist.
   environment.systemPackages = with pkgs; [
@@ -89,15 +82,14 @@
 
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-9.4.4"
-    "python2.7-pyjwt-1.7.1"
-    "nodejs-12.22.12"
-    "python2.7-certifi-2021.10.8"
-    "python-2.7.18.6"
-    "openssl-1.1.1u"
-    "openssl-1.1.1w"
-  ];
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+  #     "openssl-1.1.1w"
+      ];
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -111,17 +103,13 @@
   services.nfs.server.enable = true;
   programs.ssh.startAgent = lib.mkDefault false;
 
-  # For monitoring and inspecting the system.
-  programs.sysdig.enable = true;
-
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
     # Enable X11 Fowarding, can be connected with ssh -Y.
     forwardX11 = true;
   };
-  services.mullvad-vpn.enable = true;
-
+  
   # Enable sound
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -168,9 +156,4 @@
     automatic = true;
     dates = "weekly";
   };
-
-  # +------------------------------------------------------------+
-  # | System files                                               |
-  # +------------------------------------------------------------+
-
 }

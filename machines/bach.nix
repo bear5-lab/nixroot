@@ -12,7 +12,10 @@
     ./base/alias.nix
   ];
 
-  users.users."${config.settings.username}".extraGroups = ["docker"];
+  bix.mainUser = "bear5";
+  time.timeZone = "Asia/Shanghai";
+
+  services.mullvad-vpn.enable = true;
 
   services.xserver.libinput.touchpad.naturalScrolling = false;	
   services.xserver.libinput.mouse.leftHanded = true;

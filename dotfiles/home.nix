@@ -12,7 +12,7 @@ with pkgs.lib;
     ../options/default.nix
   ];  
   
-  home-manager.users."${config.settings.username}" = {
+  home-manager.users."${config.bix.mainUser}" = {
     home.packages = with pkgs; [
       alacritty
     ];
