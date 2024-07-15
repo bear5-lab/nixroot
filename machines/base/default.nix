@@ -21,7 +21,6 @@ in {
     "${home-manager}/nixos"
     ./inputrc.nix
     ./packages.nix
-    ../../modules/dev/docker.nix
     ../../modules/fcitx
     ../../options/default.nix
   ];
