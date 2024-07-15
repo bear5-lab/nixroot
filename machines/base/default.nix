@@ -35,6 +35,7 @@ in {
     imports = [
       ../../home/git
       ../../home/alacritty
+      ../../home/vim
     ];
   };
   

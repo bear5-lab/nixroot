@@ -14,7 +14,6 @@ in
   imports = [
     ./base/default.nix
     ../modules/desktop
-    ../modules/dev/vim.nix
     ../modules/dev/python.nix
     ../modules/dev/vscode.nix
     ./base/alias.nix

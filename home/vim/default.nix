@@ -1,18 +1,13 @@
-{ config, pkgs, lib, ...}:
+{config, lib, pkgs, ...}:
 
 {
-  environment.systemPackages = with pkgs; [
-
-    (
-     with import <nixpkgs> {};
-
-     vim_configurable.customize {
-     name = "vim";
-     vimrcConfig.packages.myPkg = with pkgs.vimPlugins; {
-      start = [ auto-pairs fzf-vim];
-     
-     };
-     vimrcConfig.customRC = ''
+  # all vim options can be found in
+  # https://github.com/nix-community/home-manager/blob/master/modules/programs/vim.nix
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [auto-pairs fzf-vim];
+    extraConfig = ''
         syntax enable
         set number relativenumber
         set incsearch
@@ -32,10 +27,7 @@
 
 
         :map <C-S-n> :Files<CR>
-     '';
-     }
-    )
-  ];
+
+    '';
+  };
 }
-
-
