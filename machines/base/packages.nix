@@ -26,7 +26,7 @@
     scrot flameshot simplescreenrecorder
 
     # ---------- Development ----------
-    tig cmake gnumake clang clang-tools binutils
+    cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl bazel jdk bazel-buildtools 
 
     # ---------- Latex --------------- #

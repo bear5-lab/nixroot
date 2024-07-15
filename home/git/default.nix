@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     difftastic
     gitg 
+    tig
   ];
 
   programs.git = {
