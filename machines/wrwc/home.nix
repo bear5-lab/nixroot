@@ -32,8 +32,8 @@
   };
 
   imports = [
-    ../home/git
-    ../home/vim
+    ../../home/git
+    ../../home/vim
   ];
 
   home.packages = (with pkgs; [
