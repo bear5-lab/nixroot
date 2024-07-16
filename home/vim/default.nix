@@ -12,6 +12,7 @@
       gruvbox # vim colorscheme showcase https://vimcolorschemes.com/i/top/b.dark/e.vim
       vim-cpp-enhanced-highlight
       ctrlp-vim
+      fzf-vim
     ];
     extraConfig = ''
         syntax enable
@@ -35,6 +36,17 @@
 
         :map <C-S-n> :Files<CR>
 
+        if executable('ag')
+          command! -bang -nargs=* Ag
+                \ call fzf#vim#grep(
+                \   'ag --nocolor --nogroup --column -- '.shellescape(<q-args>), 1,
+                \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}) : fzf#vim#with_preview(),
+                \   <bang>0)
+        endif
+
+        let mapleader = "/"
+
+        nnoremap <leader>f :Ag<SPACE>
     '';
   };
 }
