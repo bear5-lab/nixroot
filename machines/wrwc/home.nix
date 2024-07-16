@@ -32,6 +32,7 @@
   };
 
   imports = [
+    ./sensitive.nix
     ../../home/git
     ../../home/vim
   ];
