@@ -47,6 +47,8 @@
         let mapleader = "/"
 
         nnoremap <leader>f :Ag<SPACE>
+        xnoremap <silent> <cr> "*y:silent! let searchTerm = '\V'.substitute(escape(@*, '\/'), "\n", '\\n', "g") <bar> let @/ = searchTerm <bar> echo '/'.@/ <bar> call histadd("search", searchTerm) <bar> set hls<cr>
+
     '';
   };
 }
