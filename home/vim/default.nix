@@ -13,6 +13,7 @@
       vim-cpp-enhanced-highlight
       ctrlp-vim
       fzf-vim
+      vim-fugitive
     ];
     extraConfig = ''
         syntax enable
@@ -44,9 +45,13 @@
                 \   <bang>0)
         endif
 
+        command! CFormat execute '%!clang-format -style=file' 
+
         let mapleader = "/"
 
         nnoremap <leader>f :Ag<SPACE>
+        nnoremap <Leader>c :CFormat<CR>
+
         xnoremap <silent> <cr> "*y:silent! let searchTerm = '\V'.substitute(escape(@*, '\/'), "\n", '\\n', "g") <bar> let @/ = searchTerm <bar> echo '/'.@/ <bar> call histadd("search", searchTerm) <bar> set hls<cr>
 
     '';
