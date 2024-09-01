@@ -45,8 +45,8 @@
                 \   <bang>0)
         endif
 
-        command! CFormat execute '%!clang-format -style=file' 
-
+        command! CFormat execute 'let pos = getpos(".")' | execute '%!clang-format -style=file' | execute 'call setpos(".", pos)'
+        
         let mapleader = "/"
 
         nnoremap <leader>f :Ag<SPACE>
