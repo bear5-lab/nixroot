@@ -38,6 +38,7 @@
 
     # customized
     tools-scripts
+    wechat 
 
     # vpn
     openconnect openvpn 
