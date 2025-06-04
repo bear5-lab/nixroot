@@ -33,6 +33,7 @@
 
   imports = [
     ./sensitive.nix
+    ../../home/alacritty
     ../../home/git
     ../../home/vim
   ];
