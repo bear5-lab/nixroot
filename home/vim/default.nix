@@ -19,7 +19,6 @@
         syntax enable
         colorscheme gruvbox
         set background=dark
-        set number relativenumber
         set incsearch
         set noswapfile
         set showmatch
