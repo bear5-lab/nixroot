@@ -35,6 +35,8 @@
   libxkbcommon,
   libXrandr,
   zlib,
+  libXtst,
+  cups,
   ...
 }:
 
@@ -50,7 +52,7 @@ stdenv.mkDerivation {
     {
       x86_64-linux = fetchurl {
         url = "https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb";
-        hash = "sha256-FkEODKeJXlqjdSgt5eSLLV/LlYsGPeay3P0CvtGQzAE=";
+        hash = "sha256-OYWMSEZj93ObszGswFul2KbrQIEyOvEppqJ4Ff08CqU=";
       };
     }
     .${stdenv.system};
@@ -90,6 +92,8 @@ stdenv.mkDerivation {
     libxkbcommon
     libXrandr
     zlib
+    libXtst
+    cups
   ];
 
   # TODO: May need buildFHSEnv?
