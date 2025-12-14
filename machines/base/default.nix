@@ -7,18 +7,13 @@
 
 let 
   bix = config.bix;
-  home-manager = builtins.fetchGit {
-      url= "https://github.com/rycee/home-manager";
-      ref = "release-24.05";
-  };
-
 in {
   nixpkgs.overlays = [
     (import ../../overlays)
   ];
 
   imports = [
-    "${home-manager}/nixos"
+    <home-manager/nixos>
     ./inputrc.nix
     ./packages.nix
     ../../modules/fcitx
@@ -26,6 +21,7 @@ in {
   ];
 
   # Home manager
+  home-manager.backupFileExtension = "backup";
   home-manager.users."${bix.mainUser}" = {
     home.stateVersion = "24.05";
     home.username = "${bix.mainUser}";
