@@ -20,17 +20,18 @@ in
   ]; 
 
   home-manager.users."${bix.mainUser}" = {
-    programs.git = {
-      userName = "bear5";
-      userEmail = "john.xiongwu@gmail.com";
+    programs.git.settings.user = {
+      name = "bear5";
+      email = "john.xiongwu@gmail.com";
     };
   };
+
 
   time.timeZone = "Asia/Shanghai";
 
   services.mullvad-vpn.enable = true;
 
-  services.xserver.libinput = {
+  services.libinput = {
     touchpad.naturalScrolling = false;
     mouse.leftHanded = true;
   };
@@ -47,6 +48,5 @@ in
     # replicates the default behaviour
     useDHCP = false;
     interfaces.wlp2s0.useDHCP = true;
-
   };
 }

@@ -29,14 +29,15 @@ with lib;
     ];
   };
 
-  config.services.logind = if (config.bix.machineType == "laptop") then
-  {
-    lidSwitch = "suspend-then-hibernate";
-    lidSwitchDocked = "ignore";
-    lidSwitchExternalPower = "ignore";
-    extraConfig = ''
-      HoldoffTimeoutSec=60;
-    '';
-  } else {};
+  
+  #config.services.logind = if (config.bix.machineType == "laptop") then
+  #{
+  #  lidSwitch = "suspend-then-hibernate";
+  #  lidSwitchDocked = "ignore";
+  #  lidSwitchExternalPower = "ignore";
+  #  extraConfig = ''
+  #    HoldoffTimeoutSec=60;
+  #  '';
+  #} else {};
 
 }	

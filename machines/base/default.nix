@@ -16,14 +16,13 @@ in {
     <home-manager/nixos>
     ./inputrc.nix
     ./packages.nix
-    ../../modules/fcitx
     ../../options/default.nix
   ];
 
   # Home manager
   home-manager.backupFileExtension = "backup";
   home-manager.users."${bix.mainUser}" = {
-    home.stateVersion = "24.05";
+    home.stateVersion = "25.11";
     home.username = "${bix.mainUser}";
     home.homeDirectory = "/home/${bix.mainUser}";
 
@@ -31,6 +30,7 @@ in {
       ../../home/git
       ../../home/alacritty
       ../../home/vim
+      ../../home/i18n/input-method/fcitx
     ];
   };
   
@@ -56,13 +56,14 @@ in {
       allowUnfree = true;
       permittedInsecurePackages = [
   #     "openssl-1.1.1w"
+      "qtwebengine-5.15.19"
       ];
     };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  programs.bash.enableCompletion = true;
+  programs.bash.completion.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -76,11 +77,11 @@ in {
   services.openssh = {
     enable = true;
     # Enable X11 Fowarding, can be connected with ssh -Y.
-    forwardX11 = true;
+    settings.X11Forwarding = true;
   };
   
   # Enable sound
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

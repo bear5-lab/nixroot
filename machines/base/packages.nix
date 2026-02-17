@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     wget 
-    gnome.gnome-control-center
+    gnome-control-center
 
     # ---------- System Utils ----------
     rsync usbutils mkpasswd p7zip unzip
@@ -20,7 +20,6 @@
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
-    okular poppler_utils
 
     # --------- screenshot -------------
     scrot flameshot simplescreenrecorder
@@ -48,6 +47,9 @@
     feishu 
     slack
 
+    # llm
+    opencode
+    codex
   ];
 
 
