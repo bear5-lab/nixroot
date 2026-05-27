@@ -52,7 +52,7 @@ stdenv.mkDerivation {
     {
       x86_64-linux = fetchurl {
         url = "https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb";
-        hash = "sha256-OYWMSEZj93ObszGswFul2KbrQIEyOvEppqJ4Ff08CqU=";
+        hash = "sha256-zmpcIBg5OD1qsBmMAm7OwnS9YoAwRK7GH9yiDgLHl+I=";
       };
     }
     .${stdenv.system};

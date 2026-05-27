@@ -3,21 +3,36 @@
 with lib;
 
 {
-  options.bix= {
+  options.bix = {
     mainUser = mkOption {
       default = "bear5";
       type = types.str;
       description = "The main user name with uid = 1000";
     };
-  };
-
-  options.bix = {
     machineType = mkOption {
       type = types.enum ["workstation" "laptop"];
       default = "workstation";
       description = ''
         Specify the machine type, [workstation, laptop]
       '';
+    };
+    gitUser = mkOption {
+      type = types.submodule {
+        options = {
+          name = mkOption {
+            type = types.str;
+            default = "";
+            description = "Git user.name for the main user.";
+          };
+          email = mkOption {
+            type = types.str;
+            default = "";
+            description = "Git user.email for the main user.";
+          };
+        };
+      };
+      default = {};
+      description = "Git identity for the main user.";
     };
   };
 

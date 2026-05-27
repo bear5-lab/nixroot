@@ -16,6 +16,10 @@ in {
     <home-manager/nixos>
     ./inputrc.nix
     ./packages.nix
+    ./alias.nix
+    ../../modules/desktop
+    ../../modules/dev/python.nix
+    ../../modules/dev/vscode.nix
     ../../options/default.nix
   ];
 
@@ -32,6 +36,10 @@ in {
       ../../home/vim
       ../../home/i18n/input-method/fcitx
     ];
+
+    programs.git.settings.user = lib.mkIf
+      (bix.gitUser.name != "" && bix.gitUser.email != "")
+      bix.gitUser;
   };
   
   # +------------------------------------------------------------+
@@ -50,6 +58,8 @@ in {
 
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
+
+  time.timeZone = "Asia/Shanghai";
 
   nixpkgs = {
     config = {
@@ -79,6 +89,8 @@ in {
     # Enable X11 Fowarding, can be connected with ssh -Y.
     settings.X11Forwarding = true;
   };
+
+  services.mullvad-vpn.enable = true;
   
   # Enable sound
   services.pulseaudio.enable = false;
@@ -100,6 +112,20 @@ in {
 
   # bluetooth
   services.blueman.enable = true;
+
+  services.libinput = {
+    touchpad.naturalScrolling = false;
+    mouse.leftHanded = true;
+  };
+
+  networking = {
+    networkmanager.enable = true;
+    networkmanager.plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+    useDHCP = false;
+    interfaces.wlp2s0.useDHCP = true;
+  };
 
   # +------------------------------------------------------------+
   # | Garbage Collection                                         |

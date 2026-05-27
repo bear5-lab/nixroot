@@ -11,12 +11,14 @@
     xclip fzf xorg.xmodmap xorg.xev xorg.xkbcomp
     pciutils 
     ncdu tree
-    termius
+    #termius
     dig # from dns to ip address
     pavucontrol # pulseaudio volume control
+    system-config-printer
 
     # --------- Browsers ----------- #
     google-chrome tor
+    firefox
 
     # photo, video viewer and editor
     avidemux feh mplayer vlc libreoffice you-get
@@ -47,9 +49,12 @@
     feishu 
     slack
 
+    nodejs
+
     # llm
     opencode
     codex
+    claude-code
   ];
 
 
