@@ -9,14 +9,18 @@ let
     pandas
     openpyxl # read write excel 
     numpy
+    scipy
     matplotlib
     plotly
     dash
     #sklearn-deap
     seaborn
 
+    ultralytics
+
     # dl
     torchvision
+    opencv4
     
     # optimization
     cvxpy
