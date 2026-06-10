@@ -29,6 +29,7 @@
     # ---------- Development ----------
     cmake gnumake clang clang-tools binutils
     gcc silver-searcher sbcl bazel jdk bazel-buildtools 
+    gh
 
     # ---------- Latex --------------- #
     texlive.combined.scheme-full pandoc 
